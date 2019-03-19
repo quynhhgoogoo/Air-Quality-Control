@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void){
-    char word[17], outword[33];//17:16+1, 33:16*2+1
-    int i, len;
+void ascii_to_hexa(char[]);
 
+int main(void){
+    char data[100];
     printf("Intro word:");
-    fgets(word, sizeof(word), stdin);
-    len = strlen(word);
+    fgets(data, sizeof(data), stdin);
+
+    ascii_to_hexa(data);
+}
+
+void ascii_to_hexa(char word[]){
+  int i, len;
+  char outword[33];//17:16+1, 33:16*2+1
+  len = strlen(word);
     if(word[len-1]=='\n')
         word[--len] = '\0';
 
@@ -15,5 +22,4 @@ int main(void){
         sprintf(outword+i*2, "%02X", word[i]);
     }
     printf("%s\n", outword);
-    return 0;
 }
