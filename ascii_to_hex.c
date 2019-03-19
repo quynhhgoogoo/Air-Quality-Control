@@ -13,7 +13,7 @@ int main(void){
 }
 
 void ascii_to_hexa(char word[]){
-  int i, len, count;
+  int i, len;
   char outword[33];//17:16+1, 33:16*2+1
   len = strlen(word);
     if(word[len-1]=='\n')
@@ -22,10 +22,9 @@ void ascii_to_hexa(char word[]){
     for(i = 0; i<len; i++){
         sprintf(outword+i*2, "%02X", word[i]);
     }
-    count = 2*i;
     printf("%s\n", outword);
 
-    int byte_total = 5 + count;
+    int byte_total = 5 + i;
     printf("%d", byte_total);
 
     byte_length(word, byte_total);
