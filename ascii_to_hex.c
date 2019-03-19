@@ -28,7 +28,7 @@ void ascii_to_hexa(char word[]){
     int byte_total = 5 + count;
     printf("%d", byte_total);
 
-    byte_length(word, count);
+    byte_length(word, byte_total);
 }
 
 void byte_length(char word[], int count){
