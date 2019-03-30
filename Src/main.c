@@ -46,7 +46,7 @@
 #define length_LSB 0x0C
 
 /*Indicates frame data*/
-#define frame_type 0x10		//Transmit Request Frame, API identifier
+#define frame_type 0x01		//Transmit Request Frame, API identifier
 #define frame_id 0x01		//Identifies data frame to enable respond frame, API Frame ID
 #define option 0x00
 #define destination_add_MSB 0x00
@@ -62,7 +62,8 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 unsigned char data[] = {0x33, 0x2B, 0x32, 0x32, 0x2C, 0x35, 0x30};
-unsigned char sum = 0x00;
+unsigned char sum1 = 0x00;
+unsigned char sum2 = 0x00;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -117,13 +118,17 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	sum = frame_type + frame_id + destination_add_MSB + destination_add_LSB + option + data;
+	sum1 = frame_type + frame_id + destination_add_MSB + destination_add_LSB + option;
+	for(int i=0; i<sizeof(data); i++){
+		sum2+=data[i];
+	}
+	unsigned char sum = sum1 + sum2;
 	unsigned char two_last_digit = sum & 0xFF;
 	unsigned char checksum = 0xFF - two_last_digit;
 
   /* USER CODE END WHILE */
   /* USER CODE BEGIN 3 */
-	  HAL_UART_Transmit(&huart2,(unsigned char*)checksum, 7, 100);
+	  HAL_UART_Transmit(&huart2,(unsigned char*)checksum, 16, 100);
 	  HAL_Delay(50);
 
   }
