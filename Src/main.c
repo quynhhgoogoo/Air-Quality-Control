@@ -42,6 +42,8 @@
 
 /* USER CODE BEGIN Includes */
 #define start_delimeter 0x7E
+#define length_MSB 0x00
+#define length_LSB 0x0C
 
 /*Indicates frame data*/
 #define frame_type 0x10		//Transmit Request Frame, API identifier
@@ -59,8 +61,8 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-char data[data_frame_byte] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x65, 0x6C, 0x6C, 0x6F};
-char sum = 0x00;
+unsigned char data[] = {0x33, 0x2B, 0x32, 0x32, 0x2C, 0x35, 0x30};
+unsigned char sum = 0x00;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -115,13 +117,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	char sum = frame_type + frame_id + destination_add_MSB + destination_add_LSB + option + data;
-	char two_last_digit = 21 & 0xFF;
-	char checksum = 0xFF - two_last_digit;
+	sum = frame_type + frame_id + destination_add_MSB + destination_add_LSB + option + data;
+	unsigned char two_last_digit = sum & 0xFF;
+	unsigned char checksum = 0xFF - two_last_digit;
 
   /* USER CODE END WHILE */
   /* USER CODE BEGIN 3 */
-	  HAL_UART_Transmit(&huart2,(unsigned char*)checksum, data_frame_byte, 100);
+	  HAL_UART_Transmit(&huart2,(unsigned char*)checksum, 7, 100);
 	  HAL_Delay(50);
 
   }

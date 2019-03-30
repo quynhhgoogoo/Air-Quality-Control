@@ -770,8 +770,6 @@ Discarded input sections
  .bss           0x00000000        0x0 Src\main.o
  .text._Error_Handler
                 0x00000000        0x2 Src\main.o
- .bss.sum       0x00000000        0x1 Src\main.o
- .data.data     0x00000000        0xa Src\main.o
  .text          0x00000000        0x0 Src\stm32l4xx_hal_msp.o
  .data          0x00000000        0x0 Src\stm32l4xx_hal_msp.o
  .bss           0x00000000        0x0 Src\stm32l4xx_hal_msp.o
@@ -874,7 +872,7 @@ LOAD d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.
                 0x08000000                g_pfnVectors
                 0x0800018c                . = ALIGN (0x4)
 
-.text           0x0800018c     0x19d4
+.text           0x0800018c     0x19e8
                 0x0800018c                . = ALIGN (0x4)
  *(.text)
  .text          0x0800018c       0x40 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
@@ -987,233 +985,239 @@ LOAD d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.
                 0x080017fc       0xac Src\main.o
                 0x080017fc                SystemClock_Config
  .text.startup.main
-                0x080018a8       0xb0 Src\main.o
+                0x080018a8       0xc4 Src\main.o
                 0x080018a8                main
  .text.HAL_MspInit
-                0x08001958       0x8c Src\stm32l4xx_hal_msp.o
-                0x08001958                HAL_MspInit
+                0x0800196c       0x8c Src\stm32l4xx_hal_msp.o
+                0x0800196c                HAL_MspInit
  .text.HAL_UART_MspInit
-                0x080019e4       0x60 Src\stm32l4xx_hal_msp.o
-                0x080019e4                HAL_UART_MspInit
+                0x080019f8       0x60 Src\stm32l4xx_hal_msp.o
+                0x080019f8                HAL_UART_MspInit
  .text.NMI_Handler
-                0x08001a44        0x2 Src\stm32l4xx_it.o
-                0x08001a44                NMI_Handler
+                0x08001a58        0x2 Src\stm32l4xx_it.o
+                0x08001a58                NMI_Handler
  .text.HardFault_Handler
-                0x08001a46        0x2 Src\stm32l4xx_it.o
-                0x08001a46                HardFault_Handler
+                0x08001a5a        0x2 Src\stm32l4xx_it.o
+                0x08001a5a                HardFault_Handler
  .text.MemManage_Handler
-                0x08001a48        0x2 Src\stm32l4xx_it.o
-                0x08001a48                MemManage_Handler
+                0x08001a5c        0x2 Src\stm32l4xx_it.o
+                0x08001a5c                MemManage_Handler
  .text.BusFault_Handler
-                0x08001a4a        0x2 Src\stm32l4xx_it.o
-                0x08001a4a                BusFault_Handler
+                0x08001a5e        0x2 Src\stm32l4xx_it.o
+                0x08001a5e                BusFault_Handler
  .text.UsageFault_Handler
-                0x08001a4c        0x2 Src\stm32l4xx_it.o
-                0x08001a4c                UsageFault_Handler
+                0x08001a60        0x2 Src\stm32l4xx_it.o
+                0x08001a60                UsageFault_Handler
  .text.SVC_Handler
-                0x08001a4e        0x2 Src\stm32l4xx_it.o
-                0x08001a4e                SVC_Handler
+                0x08001a62        0x2 Src\stm32l4xx_it.o
+                0x08001a62                SVC_Handler
  .text.DebugMon_Handler
-                0x08001a50        0x2 Src\stm32l4xx_it.o
-                0x08001a50                DebugMon_Handler
+                0x08001a64        0x2 Src\stm32l4xx_it.o
+                0x08001a64                DebugMon_Handler
  .text.PendSV_Handler
-                0x08001a52        0x2 Src\stm32l4xx_it.o
-                0x08001a52                PendSV_Handler
+                0x08001a66        0x2 Src\stm32l4xx_it.o
+                0x08001a66                PendSV_Handler
  .text.SysTick_Handler
-                0x08001a54        0xe Src\stm32l4xx_it.o
-                0x08001a54                SysTick_Handler
- *fill*         0x08001a62        0x2 
+                0x08001a68        0xe Src\stm32l4xx_it.o
+                0x08001a68                SysTick_Handler
+ *fill*         0x08001a76        0x2 
  .text.SystemInit
-                0x08001a64       0x48 Src\system_stm32l4xx.o
-                0x08001a64                SystemInit
+                0x08001a78       0x48 Src\system_stm32l4xx.o
+                0x08001a78                SystemInit
  .text.Reset_Handler
-                0x08001aac       0x50 startup\startup_stm32l432xx.o
-                0x08001aac                Reset_Handler
+                0x08001ac0       0x50 startup\startup_stm32l432xx.o
+                0x08001ac0                Reset_Handler
  .text.Default_Handler
-                0x08001afc        0x2 startup\startup_stm32l432xx.o
-                0x08001afc                RTC_Alarm_IRQHandler
-                0x08001afc                EXTI2_IRQHandler
-                0x08001afc                TIM1_CC_IRQHandler
-                0x08001afc                TSC_IRQHandler
-                0x08001afc                TAMP_STAMP_IRQHandler
-                0x08001afc                EXTI3_IRQHandler
-                0x08001afc                LPTIM2_IRQHandler
-                0x08001afc                I2C3_ER_IRQHandler
-                0x08001afc                EXTI0_IRQHandler
-                0x08001afc                CAN1_RX0_IRQHandler
-                0x08001afc                FPU_IRQHandler
-                0x08001afc                TIM1_UP_TIM16_IRQHandler
-                0x08001afc                SPI1_IRQHandler
-                0x08001afc                TIM6_DAC_IRQHandler
-                0x08001afc                DMA2_Channel2_IRQHandler
-                0x08001afc                DMA1_Channel4_IRQHandler
-                0x08001afc                ADC1_IRQHandler
-                0x08001afc                DMA1_Channel7_IRQHandler
-                0x08001afc                CAN1_RX1_IRQHandler
-                0x08001afc                DMA2_Channel1_IRQHandler
-                0x08001afc                QUADSPI_IRQHandler
-                0x08001afc                I2C1_EV_IRQHandler
-                0x08001afc                DMA1_Channel6_IRQHandler
-                0x08001afc                DMA2_Channel4_IRQHandler
-                0x08001afc                RCC_IRQHandler
-                0x08001afc                TIM1_TRG_COM_IRQHandler
-                0x08001afc                DMA1_Channel1_IRQHandler
-                0x08001afc                Default_Handler
-                0x08001afc                DMA2_Channel7_IRQHandler
-                0x08001afc                EXTI15_10_IRQHandler
-                0x08001afc                TIM7_IRQHandler
-                0x08001afc                I2C3_EV_IRQHandler
-                0x08001afc                USB_IRQHandler
-                0x08001afc                EXTI9_5_IRQHandler
-                0x08001afc                RTC_WKUP_IRQHandler
-                0x08001afc                PVD_PVM_IRQHandler
-                0x08001afc                CAN1_TX_IRQHandler
-                0x08001afc                DMA2_Channel5_IRQHandler
-                0x08001afc                CRS_IRQHandler
-                0x08001afc                DMA1_Channel5_IRQHandler
-                0x08001afc                EXTI4_IRQHandler
-                0x08001afc                RNG_IRQHandler
-                0x08001afc                DMA1_Channel3_IRQHandler
-                0x08001afc                COMP_IRQHandler
-                0x08001afc                WWDG_IRQHandler
-                0x08001afc                LPUART1_IRQHandler
-                0x08001afc                DMA2_Channel6_IRQHandler
-                0x08001afc                TIM2_IRQHandler
-                0x08001afc                EXTI1_IRQHandler
-                0x08001afc                USART2_IRQHandler
-                0x08001afc                DMA1_Channel2_IRQHandler
-                0x08001afc                CAN1_SCE_IRQHandler
-                0x08001afc                FLASH_IRQHandler
-                0x08001afc                USART1_IRQHandler
-                0x08001afc                SPI3_IRQHandler
-                0x08001afc                I2C1_ER_IRQHandler
-                0x08001afc                SWPMI1_IRQHandler
-                0x08001afc                LPTIM1_IRQHandler
-                0x08001afc                SAI1_IRQHandler
-                0x08001afc                DMA2_Channel3_IRQHandler
-                0x08001afc                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x08001afe        0x2 
+                0x08001b10        0x2 startup\startup_stm32l432xx.o
+                0x08001b10                RTC_Alarm_IRQHandler
+                0x08001b10                EXTI2_IRQHandler
+                0x08001b10                TIM1_CC_IRQHandler
+                0x08001b10                TSC_IRQHandler
+                0x08001b10                TAMP_STAMP_IRQHandler
+                0x08001b10                EXTI3_IRQHandler
+                0x08001b10                LPTIM2_IRQHandler
+                0x08001b10                I2C3_ER_IRQHandler
+                0x08001b10                EXTI0_IRQHandler
+                0x08001b10                CAN1_RX0_IRQHandler
+                0x08001b10                FPU_IRQHandler
+                0x08001b10                TIM1_UP_TIM16_IRQHandler
+                0x08001b10                SPI1_IRQHandler
+                0x08001b10                TIM6_DAC_IRQHandler
+                0x08001b10                DMA2_Channel2_IRQHandler
+                0x08001b10                DMA1_Channel4_IRQHandler
+                0x08001b10                ADC1_IRQHandler
+                0x08001b10                DMA1_Channel7_IRQHandler
+                0x08001b10                CAN1_RX1_IRQHandler
+                0x08001b10                DMA2_Channel1_IRQHandler
+                0x08001b10                QUADSPI_IRQHandler
+                0x08001b10                I2C1_EV_IRQHandler
+                0x08001b10                DMA1_Channel6_IRQHandler
+                0x08001b10                DMA2_Channel4_IRQHandler
+                0x08001b10                RCC_IRQHandler
+                0x08001b10                TIM1_TRG_COM_IRQHandler
+                0x08001b10                DMA1_Channel1_IRQHandler
+                0x08001b10                Default_Handler
+                0x08001b10                DMA2_Channel7_IRQHandler
+                0x08001b10                EXTI15_10_IRQHandler
+                0x08001b10                TIM7_IRQHandler
+                0x08001b10                I2C3_EV_IRQHandler
+                0x08001b10                USB_IRQHandler
+                0x08001b10                EXTI9_5_IRQHandler
+                0x08001b10                RTC_WKUP_IRQHandler
+                0x08001b10                PVD_PVM_IRQHandler
+                0x08001b10                CAN1_TX_IRQHandler
+                0x08001b10                DMA2_Channel5_IRQHandler
+                0x08001b10                CRS_IRQHandler
+                0x08001b10                DMA1_Channel5_IRQHandler
+                0x08001b10                EXTI4_IRQHandler
+                0x08001b10                RNG_IRQHandler
+                0x08001b10                DMA1_Channel3_IRQHandler
+                0x08001b10                COMP_IRQHandler
+                0x08001b10                WWDG_IRQHandler
+                0x08001b10                LPUART1_IRQHandler
+                0x08001b10                DMA2_Channel6_IRQHandler
+                0x08001b10                TIM2_IRQHandler
+                0x08001b10                EXTI1_IRQHandler
+                0x08001b10                USART2_IRQHandler
+                0x08001b10                DMA1_Channel2_IRQHandler
+                0x08001b10                CAN1_SCE_IRQHandler
+                0x08001b10                FLASH_IRQHandler
+                0x08001b10                USART1_IRQHandler
+                0x08001b10                SPI3_IRQHandler
+                0x08001b10                I2C1_ER_IRQHandler
+                0x08001b10                SWPMI1_IRQHandler
+                0x08001b10                LPTIM1_IRQHandler
+                0x08001b10                SAI1_IRQHandler
+                0x08001b10                DMA2_Channel3_IRQHandler
+                0x08001b10                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x08001b12        0x2 
  .text.__libc_init_array
-                0x08001b00       0x48 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu\libc_nano.a(lib_a-init.o)
-                0x08001b00                __libc_init_array
+                0x08001b14       0x48 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu\libc_nano.a(lib_a-init.o)
+                0x08001b14                __libc_init_array
  *(.glue_7)
- .glue_7        0x08001b48        0x0 linker stubs
+ .glue_7        0x08001b5c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08001b48        0x0 linker stubs
+ .glue_7t       0x08001b5c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08001b48        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x08001b5c        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
  *(.init)
- .init          0x08001b48        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
-                0x08001b48                _init
- .init          0x08001b4c        0x8 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
+ .init          0x08001b5c        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
+                0x08001b5c                _init
+ .init          0x08001b60        0x8 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
  *(.fini)
- .fini          0x08001b54        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
-                0x08001b54                _fini
- .fini          0x08001b58        0x8 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
-                0x08001b60                . = ALIGN (0x4)
-                0x08001b60                _etext = .
+ .fini          0x08001b68        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
+                0x08001b68                _fini
+ .fini          0x08001b6c        0x8 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
+                0x08001b74                . = ALIGN (0x4)
+                0x08001b74                _etext = .
 
-.vfp11_veneer   0x08001b60        0x0
- .vfp11_veneer  0x08001b60        0x0 linker stubs
+.vfp11_veneer   0x08001b74        0x0
+ .vfp11_veneer  0x08001b74        0x0 linker stubs
 
-.v4_bx          0x08001b60        0x0
- .v4_bx         0x08001b60        0x0 linker stubs
+.v4_bx          0x08001b74        0x0
+ .v4_bx         0x08001b74        0x0 linker stubs
 
-.iplt           0x08001b60        0x0
- .iplt          0x08001b60        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+.iplt           0x08001b74        0x0
+ .iplt          0x08001b74        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
 
-.rodata         0x08001b60       0x5c
-                0x08001b60                . = ALIGN (0x4)
+.rodata         0x08001b74       0x5c
+                0x08001b74                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.CSWTCH.51
-                0x08001b60        0x4 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
+                0x08001b74        0x4 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
  .rodata.CSWTCH.52
-                0x08001b64        0xd Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
+                0x08001b78        0xd Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
  .rodata.AHBPrescTable
-                0x08001b71       0x10 Src\system_stm32l4xx.o
-                0x08001b71                AHBPrescTable
+                0x08001b85       0x10 Src\system_stm32l4xx.o
+                0x08001b85                AHBPrescTable
  .rodata.APBPrescTable
-                0x08001b81        0x8 Src\system_stm32l4xx.o
-                0x08001b81                APBPrescTable
- *fill*         0x08001b89        0x3 
+                0x08001b95        0x8 Src\system_stm32l4xx.o
+                0x08001b95                APBPrescTable
+ *fill*         0x08001b9d        0x3 
  .rodata.MSIRangeTable
-                0x08001b8c       0x30 Src\system_stm32l4xx.o
-                0x08001b8c                MSIRangeTable
-                0x08001bbc                . = ALIGN (0x4)
+                0x08001ba0       0x30 Src\system_stm32l4xx.o
+                0x08001ba0                MSIRangeTable
+                0x08001bd0                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08001bbc        0x8
-                0x08001bbc                __exidx_start = .
+.ARM            0x08001bd0        0x8
+                0x08001bd0                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08001bbc        0x8 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
-                0x08001bc4                __exidx_end = .
+ .ARM.exidx     0x08001bd0        0x8 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
+                0x08001bd8                __exidx_end = .
 
-.rel.dyn        0x08001bc4        0x0
- .rel.iplt      0x08001bc4        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+.rel.dyn        0x08001bd8        0x0
+ .rel.iplt      0x08001bd8        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
 
-.preinit_array  0x08001bc4        0x0
-                0x08001bc4                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x08001bd8        0x0
+                0x08001bd8                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x08001bc4                PROVIDE (__preinit_array_end, .)
+                0x08001bd8                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x08001bc4        0x4
-                0x08001bc4                PROVIDE (__init_array_start, .)
+.init_array     0x08001bd8        0x4
+                0x08001bd8                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x08001bc4        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
-                0x08001bc8                PROVIDE (__init_array_end, .)
+ .init_array    0x08001bd8        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+                0x08001bdc                PROVIDE (__init_array_end, .)
 
-.fini_array     0x08001bc8        0x4
+.fini_array     0x08001bdc        0x4
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08001bc8        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+ .fini_array    0x08001bdc        0x4 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end, .)
-                0x08001bcc                _sidata = LOADADDR (.data)
+                0x08001be0                _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x4 load address 0x08001bcc
+.data           0x20000000        0xc load address 0x08001be0
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
  *(.data*)
+ .data.data     0x20000000        0x7 Src\main.o
+                0x20000000                data
+ *fill*         0x20000007        0x1 
  .data.SystemCoreClock
-                0x20000000        0x4 Src\system_stm32l4xx.o
-                0x20000000                SystemCoreClock
-                0x20000004                . = ALIGN (0x4)
-                0x20000004                _edata = .
+                0x20000008        0x4 Src\system_stm32l4xx.o
+                0x20000008                SystemCoreClock
+                0x2000000c                . = ALIGN (0x4)
+                0x2000000c                _edata = .
 
-.igot.plt       0x20000004        0x0 load address 0x08001bd0
- .igot.plt      0x20000004        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
-                0x20000004                . = ALIGN (0x4)
+.igot.plt       0x2000000c        0x0 load address 0x08001bec
+ .igot.plt      0x2000000c        0x0 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+                0x2000000c                . = ALIGN (0x4)
 
-.bss            0x20000004       0x98 load address 0x08001bd0
-                0x20000004                _sbss = .
-                0x20000004                __bss_start__ = _sbss
+.bss            0x2000000c       0x9c load address 0x08001bec
+                0x2000000c                _sbss = .
+                0x2000000c                __bss_start__ = _sbss
  *(.bss)
- .bss           0x20000004       0x1c d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+ .bss           0x2000000c       0x1c d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
  *(.bss*)
+ .bss.sum       0x20000028        0x1 Src\main.o
+                0x20000028                sum
  *(COMMON)
- COMMON         0x20000020        0x4 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
-                0x20000020                uwTick
- COMMON         0x20000024       0x78 Src\main.o
-                0x20000024                huart2
-                0x2000009c                . = ALIGN (0x4)
-                0x2000009c                _ebss = .
-                0x2000009c                __bss_end__ = _ebss
+ *fill*         0x20000029        0x3 
+ COMMON         0x2000002c        0x4 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
+                0x2000002c                uwTick
+ COMMON         0x20000030       0x78 Src\main.o
+                0x20000030                huart2
+                0x200000a8                . = ALIGN (0x4)
+                0x200000a8                _ebss = .
+                0x200000a8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2000009c      0x600 load address 0x08001bd0
-                0x2000009c                . = ALIGN (0x4)
+                0x200000a8      0x600 load address 0x08001bec
+                0x200000a8                . = ALIGN (0x4)
                 [!provide]                PROVIDE (end, .)
                 [!provide]                PROVIDE (_end, .)
-                0x2000029c                . = (. + _Min_Heap_Size)
- *fill*         0x2000009c      0x200 
-                0x2000069c                . = (. + _Min_Stack_Size)
- *fill*         0x2000029c      0x400 
-                0x2000069c                . = ALIGN (0x4)
+                0x200002a8                . = (. + _Min_Heap_Size)
+ *fill*         0x200000a8      0x200 
+                0x200006a8                . = (. + _Min_Stack_Size)
+ *fill*         0x200002a8      0x400 
+                0x200006a8                . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -1265,7 +1269,7 @@ LOAD d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.
                 0x000003cf       0x22 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
 OUTPUT(test.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x9816
+.debug_info     0x00000000     0x980c
  .debug_info    0x00000000      0x9b7 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
  .debug_info    0x000009b7      0xeef Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_cortex.o
  .debug_info    0x000018a6      0x862 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.o
@@ -1274,13 +1278,13 @@ OUTPUT(test.elf elf32-littlearm)
  .debug_info    0x00003556      0xdd1 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.o
  .debug_info    0x00004327     0x10b2 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc_ex.o
  .debug_info    0x000053d9     0x1c2a Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
- .debug_info    0x00007003     0x122c Src\main.o
- .debug_info    0x0000822f      0xd99 Src\stm32l4xx_hal_msp.o
- .debug_info    0x00008fc8      0x203 Src\stm32l4xx_it.o
- .debug_info    0x000091cb      0x5dc Src\system_stm32l4xx.o
- .debug_info    0x000097a7       0x6f startup\startup_stm32l432xx.o
+ .debug_info    0x00007003     0x1222 Src\main.o
+ .debug_info    0x00008225      0xd99 Src\stm32l4xx_hal_msp.o
+ .debug_info    0x00008fbe      0x203 Src\stm32l4xx_it.o
+ .debug_info    0x000091c1      0x5dc Src\system_stm32l4xx.o
+ .debug_info    0x0000979d       0x6f startup\startup_stm32l432xx.o
 
-.debug_abbrev   0x00000000     0x1a18
+.debug_abbrev   0x00000000     0x19ed
  .debug_abbrev  0x00000000      0x281 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
  .debug_abbrev  0x00000281      0x2e6 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_cortex.o
  .debug_abbrev  0x00000567      0x1d7 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.o
@@ -1289,11 +1293,11 @@ OUTPUT(test.elf elf32-littlearm)
  .debug_abbrev  0x00000b19      0x267 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.o
  .debug_abbrev  0x00000d80      0x2eb Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc_ex.o
  .debug_abbrev  0x0000106b      0x30e Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
- .debug_abbrev  0x00001379      0x2a9 Src\main.o
- .debug_abbrev  0x00001622      0x1b0 Src\stm32l4xx_hal_msp.o
- .debug_abbrev  0x000017d2      0x105 Src\stm32l4xx_it.o
- .debug_abbrev  0x000018d7      0x12f Src\system_stm32l4xx.o
- .debug_abbrev  0x00001a06       0x12 startup\startup_stm32l432xx.o
+ .debug_abbrev  0x00001379      0x27e Src\main.o
+ .debug_abbrev  0x000015f7      0x1b0 Src\stm32l4xx_hal_msp.o
+ .debug_abbrev  0x000017a7      0x105 Src\stm32l4xx_it.o
+ .debug_abbrev  0x000018ac      0x12f Src\system_stm32l4xx.o
+ .debug_abbrev  0x000019db       0x12 startup\startup_stm32l432xx.o
 
 .debug_loc      0x00000000     0x3996
  .debug_loc     0x00000000       0xd3 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
@@ -1335,7 +1339,7 @@ OUTPUT(test.elf elf32-littlearm)
  .debug_aranges
                 0x00000740       0x28 startup\startup_stm32l432xx.o
 
-.debug_ranges   0x00000000      0x8a8
+.debug_ranges   0x00000000      0x870
  .debug_ranges  0x00000000       0xd0 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
  .debug_ranges  0x000000d0      0x138 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_cortex.o
  .debug_ranges  0x00000208       0x68 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.o
@@ -1344,13 +1348,13 @@ OUTPUT(test.elf elf32-littlearm)
  .debug_ranges  0x000003e8       0x90 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.o
  .debug_ranges  0x00000478      0x130 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc_ex.o
  .debug_ranges  0x000005a8      0x190 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
- .debug_ranges  0x00000738       0x90 Src\main.o
- .debug_ranges  0x000007c8       0x70 Src\stm32l4xx_hal_msp.o
- .debug_ranges  0x00000838       0x38 Src\stm32l4xx_it.o
- .debug_ranges  0x00000870       0x18 Src\system_stm32l4xx.o
- .debug_ranges  0x00000888       0x20 startup\startup_stm32l432xx.o
+ .debug_ranges  0x00000738       0x58 Src\main.o
+ .debug_ranges  0x00000790       0x70 Src\stm32l4xx_hal_msp.o
+ .debug_ranges  0x00000800       0x38 Src\stm32l4xx_it.o
+ .debug_ranges  0x00000838       0x18 Src\system_stm32l4xx.o
+ .debug_ranges  0x00000850       0x20 startup\startup_stm32l432xx.o
 
-.debug_line     0x00000000     0x370e
+.debug_line     0x00000000     0x3716
  .debug_line    0x00000000      0x3b8 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
  .debug_line    0x000003b8      0x419 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_cortex.o
  .debug_line    0x000007d1      0x38a Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.o
@@ -1359,11 +1363,11 @@ OUTPUT(test.elf elf32-littlearm)
  .debug_line    0x000013c3      0x596 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.o
  .debug_line    0x00001959      0x67c Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc_ex.o
  .debug_line    0x00001fd5      0xd35 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
- .debug_line    0x00002d0a      0x2fe Src\main.o
- .debug_line    0x00003008      0x275 Src\stm32l4xx_hal_msp.o
- .debug_line    0x0000327d      0x202 Src\stm32l4xx_it.o
- .debug_line    0x0000347f      0x210 Src\system_stm32l4xx.o
- .debug_line    0x0000368f       0x7f startup\startup_stm32l432xx.o
+ .debug_line    0x00002d0a      0x306 Src\main.o
+ .debug_line    0x00003010      0x275 Src\stm32l4xx_hal_msp.o
+ .debug_line    0x00003285      0x202 Src\stm32l4xx_it.o
+ .debug_line    0x00003487      0x210 Src\system_stm32l4xx.o
+ .debug_line    0x00003697       0x7f startup\startup_stm32l432xx.o
 
 .debug_str      0x00000000     0x2c75
  .debug_str     0x00000000      0xa4d Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
@@ -1406,7 +1410,7 @@ OUTPUT(test.elf elf32-littlearm)
  .comment       0x0000007c       0x7d Src\stm32l4xx_it.o
  .comment       0x0000007c       0x7d Src\system_stm32l4xx.o
 
-.debug_frame    0x00000000     0x1238
+.debug_frame    0x00000000     0x123c
  .debug_frame   0x00000000      0x1e8 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.o
  .debug_frame   0x000001e8      0x158 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_cortex.o
  .debug_frame   0x00000340       0xd8 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.o
@@ -1415,10 +1419,10 @@ OUTPUT(test.elf elf32-littlearm)
  .debug_frame   0x00000728      0x160 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.o
  .debug_frame   0x00000888      0x238 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc_ex.o
  .debug_frame   0x00000ac0      0x548 Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.o
- .debug_frame   0x00001008       0x60 Src\main.o
- .debug_frame   0x00001068       0x60 Src\stm32l4xx_hal_msp.o
- .debug_frame   0x000010c8       0xac Src\stm32l4xx_it.o
- .debug_frame   0x00001174       0x38 Src\system_stm32l4xx.o
- .debug_frame   0x000011ac       0x2c d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu\libc_nano.a(lib_a-init.o)
- .debug_frame   0x000011d8       0x2c d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00001204       0x34 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00001008       0x64 Src\main.o
+ .debug_frame   0x0000106c       0x60 Src\stm32l4xx_hal_msp.o
+ .debug_frame   0x000010cc       0xac Src\stm32l4xx_it.o
+ .debug_frame   0x00001178       0x38 Src\system_stm32l4xx.o
+ .debug_frame   0x000011b0       0x2c d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x000011dc       0x2c d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00001208       0x34 d:/truestudio for stm32 9.0.1/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
